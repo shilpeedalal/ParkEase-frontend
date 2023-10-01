@@ -12,7 +12,6 @@ const BookingForm = () => {
 
     // Create a form object for storing values
     const [form, setForm] = useState({
-        vehicle_company: '',
         vehicle_model: '',
         plate_number: '',
         car_color: '',
@@ -66,10 +65,6 @@ const BookingForm = () => {
                 {error && <div className="alert alert-danger" role="alert">
                     {error}
                 </div>}
-                <div className="mb-3">
-                    <label htmlFor="vehicle_company" className="form-label">Vehicle company</label>
-                    <input type="text" className="form-control" id="vehicle_company" value={form?.vehicle_company} onChange={(e) => handleFormChange({ key: 'vehicle_company', value: e.target.value })} required />
-                </div>
                 <div className="mb-3">
                     <label htmlFor="vehicle_model" className="form-label">Vehicle model</label>
                     <input type="text" className="form-control" id="vehicle_model" value={form?.vehicle_model} onChange={(e) => handleFormChange({ key: 'vehicle_model', value: e.target.value })} required />

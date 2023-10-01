@@ -19,7 +19,6 @@ const Booking = () => {
         return bookings && bookings.map((item, index) => (
             <tr className='col-md-4' key={index}>
                 <th scope="row">{index + 1}</th>
-                <td>{item?.vehicle_company}</td>
                 <td>{item?.vehicle_model}</td>
                 <td>{item?.plate_number}</td>
                 <td>{item?.car_color}</td>
@@ -119,7 +118,6 @@ const Booking = () => {
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Vehicle company</th>
                             <th scope="col">Vehicle model</th>
                             <th scope="col">Plate number</th>
                             <th scope="col">Car color</th>
