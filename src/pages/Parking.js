@@ -10,12 +10,10 @@ const Parking = () => {
     const navigate = useNavigate()
     const [parkings, setParkings] = useState()
 
-    // Delete management states
     const [selectedParking, setSelectedParking] = useState()
     const [showDeleteModal, setShowDeleteModal] = useState(false)
 
     useEffect(() => {
-        // Parking List API sets parkings state using setParkings passed as callback function
         if (user?.type === 'owner') {
             fetchParkings({ user_id: user?._id, setParkings })
         }
